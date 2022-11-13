@@ -23,6 +23,95 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  outline: 2px solid tomato;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+  /* margin-left: auto; */
+}
+
+.header-logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.hero-studio .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.button-studio {
+  min-width: 215px;
+  min-height: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  padding: 10px 32px;
+  border-radius: 4px;
+}
+.features .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.services .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.services-title {
+  padding-bottom: 50px;
+}
+
+.team .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-title {
+  padding-bottom: 50px;
+}
+
+.footer-logotype {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.contacts {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
 
 body {
   color: var(--main-text-color);
@@ -30,7 +119,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.navigation {
+.header {
   background-color: #ffffff;
 }
 
@@ -99,6 +188,9 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-portfolio {
@@ -125,6 +217,55 @@ body {
   background-color: #188ce8;
 }
 
+.button-portfolio-container {
+  padding-top: 94px;
+  padding-bottom: 50px;
+  padding-right: 300px;
+  padding-left: 300px;
+}
+.button-portfolio {
+  display: flex;
+  align-items: center;
+}
+.portfolio-controls-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn-all {
+  min-width: 73px;
+  min-height: 38px;
+  padding: 6px 25px;
+  border-radius: 4px;
+}
+
+.btn-web {
+  min-width: 125px;
+  min-height: 38px;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.btn-apps {
+  min-width: 112px;
+  min-height: 38px;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.btn-design {
+  min-width: 103px;
+  min-height: 38px;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.btn-marketing {
+  min-width: 130px;
+  min-height: 38px;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
 .button-portfolio-item {
   font-family: roboto, sans-serif;
   color: var(--main-text-color);
@@ -142,11 +283,22 @@ body {
   background-color: var(--brand-color);
 }
 
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.features-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
 .features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 
 .features-text {
@@ -162,6 +314,16 @@ body {
   text-align: center;
 }
 
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.services-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
 .team {
   background-color: #f5f4fa;
 }
@@ -172,16 +334,42 @@ body {
   text-align: center;
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
 .team-subtitle {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
+
+  padding-top: 30px;
 }
 
 .team-text {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
+
+  padding-top: 10px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-items {
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .projects-litle {
@@ -190,12 +378,18 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  padding-top: 20px;
+  text-align: center;
 }
 
 .projects-text {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.8;
+
+  padding-top: 4px;
+  text-align: center;
 }
 
 .footer {
